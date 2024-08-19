@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="mt-5 mb-5 fs-2"><b>Gestion de Inventario</b></h1>
+    <app-modal-insert (dataInsert)="insertData($event)"></app-modal-insert>
+    <app-modal-update (dataUpdate)="updateData($event)"></app-modal-update>
+    <div class="d-flex justify-content-between flex-wrap align-items-center w-100 mb-5">
+        <app-search style="width: 50%;"></app-search>
+        <div class="d-flex justify-content-between align-items-center w-50 text-center">
+            <app-buttons class="w-100" [target]="'#exampleModalTwo'" [buttonClass]="buttonClassUpdate" [buttonText]="buttonUpdate" (buttonCLick)="receiveClick('buttonUpdate')"></app-buttons>
+            <app-buttons class="w-100" [target]="'#exampleModalOne'" [buttonClass]="buttonClassInsert" [buttonText]="buttonInsert" (buttonCLick)="receiveClick('buttonInsert')"></app-buttons>
+        </div>
+    </div>
+    <app-table></app-table>
+</div>

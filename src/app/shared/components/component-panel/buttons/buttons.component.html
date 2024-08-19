@@ -1,0 +1,12 @@
+
+
+<button 
+    type="button" 
+    class="w-75" 
+    data-bs-toggle="modal" 
+    data-bs-target="#exampleModal"
+    [attr.data-bs-target]="target"
+    [ngClass]="['btn', buttonClass]" 
+    (click)="sendClick()"
+    ><b>{{ buttonText }}</b>
+</button>

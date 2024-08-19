@@ -1,0 +1,58 @@
+<div class="modal fade" id="exampleModalOne" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-2 text-primary" id="exampleModalLabel"><b>Insertar datos de farmacia</b></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form (ngSubmit)="onSubmitInsert()" #formPharmacy="ngForm">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><b>Producto</b></label>
+                        <input type="email" class="form-control" id="product" name="product" aria-describedby="product" [(ngModel)]="model.product" required #product="ngModel">
+                        <div [hidden]="product.valid || product.pristine" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><b>Principio Activo</b></label>
+                        <input type="email" class="form-control" id="activePrinciple" name="activePrinciple" aria-describedby="activePrinciple" [(ngModel)]="model.activePrinciple" required #activePrinciple="ngModel">
+                        <div [hidden]="activePrinciple.valid || activePrinciple.pristine" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <!-- tabletas - emulsion - perfumeria -->
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><b>Cateogoria</b></label>
+                        <select name="category" id="category" class="form-control" [(ngModel)]="model.category" required #category="ngModel" placeholder="Ingrese datos">
+                            <option value="" disabled selected>Seleccione una categoria</option>
+                            <option *ngFor="let category of selectCategory;" [value]="category">{{ category }}</option>
+                        </select>
+                        <div [hidden]="category.valid || category.pristine" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><b>Laboratorio</b></label>
+                        <!-- <input type="email" class="form-control" id="laboratory" name="laboratory" aria-describedby="laboratory" [(ngModel)]="model.laboratory" required #laboratory="ngModel"> -->
+                        <select class="form-control" name="laboratory" id="laboratory" [(ngModel)]="model.laboratory" required #laboratory="ngModel">
+                            <option value="" disabled selected>Seleccione un laboratorio</option>
+                            <option *ngFor="let laboratory of selectLaboratory;" [value]="laboratory">{{ laboratory }}</option>
+                        </select> 
+                        <div [hidden]="laboratory.valid || laboratory.pristine" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <!-- Cantidad por unidades -->
+                    <!-- <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Cantidad producto</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div> -->
+                    <div class="d-flex justify-content-between align-items-center mt-5">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width: 45%;"><b>Cerrar</b></button>
+                        <button type="submit" class="btn btn-info" style="width: 45%;"><b>Enviar datos</b></button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>

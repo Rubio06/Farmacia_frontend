@@ -1,0 +1,38 @@
+<!-- Filtro de búsqueda -->
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Principio Activo</th>
+                <th>Categoria</th>
+                <th>Laboratorio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let producto of productos | toUpperCaseandOrder; let i = index">
+                <tr>
+                    <td>P0000{{ i + 1 }}</td>
+                    <td>{{ producto.product }}</td>
+                    <td>{{ producto.activePrinciple }}</td>
+                    <td>{{ producto.category }}</td>
+                    <td>{{ producto.laboratory }}</td>
+                    <td>
+                        <div class="container__icons">
+                            <mat-icon>delete</mat-icon>
+                            <mat-icon>update</mat-icon>
+                        </div>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+
+    <div class="pagination-controls">
+        <button>Anterior</button>
+        <span>Página 1 de 3</span>
+        <button>Siguiente</button>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.container__search {
+    display: flex;
+    border: 2px solid transparent; /* Para mostrar el borde al hacer foco */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave para borde y sombra */
+    border: 2px solid rgb(190, 184, 184);
+    border-radius: 5px;
+    width: 70%;
+}
+
+.input__search {
+    border: none;
+    width: 100%;
+    outline: 0px;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.cointaner__icon{
+    display: flex;
+    width: 11%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: rgb(112, 187, 183);
+    padding: 6px;
+}
+  
+mat-icon {
+  font-size: 28px;
+  font-weight: bold;
+  height: 100%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.container__search:focus-within {
+  border: 2px solid rgb(82, 173, 169);
+  box-shadow: 0 0 8px black;
+}
+  
