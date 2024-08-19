@@ -6,19 +6,16 @@
                 <th>ID</th>
                 <th>Producto</th>
                 <th>Principio Activo</th>
-                <th>Categoria</th>
-                <th>Laboratorio</th>
+
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            <ng-container *ngFor="let producto of productos | toUpperCaseandOrder; let i = index">
-                <tr>
+            <ng-container>
+                <tr *ngFor="let producto of dataPokemons; let i = index">
                     <td>P0000{{ i + 1 }}</td>
-                    <td>{{ producto.product }}</td>
-                    <td>{{ producto.activePrinciple }}</td>
-                    <td>{{ producto.category }}</td>
-                    <td>{{ producto.laboratory }}</td>
+                    <td>{{ producto.name }}</td>
+                    <td>{{ producto.url }}</td>
                     <td>
                         <div class="container__icons">
                             <mat-icon>delete</mat-icon>

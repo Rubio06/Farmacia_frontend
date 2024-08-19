@@ -11,16 +11,21 @@ import {
   SortAltIcon,
   SortAmountDownIcon,
   SortAmountUpAltIcon
-} from "./chunk-VQSQDS36.js";
-import "./chunk-YKW3UOPR.js";
-import "./chunk-JI7CJ6SV.js";
+} from "./chunk-6OGYEOFY.js";
 import {
   BaseIcon,
   DomHandler,
+  FilterService,
+  ObjectUtils,
+  PrimeNGConfig,
+  PrimeTemplate,
   Ripple,
   RippleModule,
+  SharedModule,
   SpinnerIcon
-} from "./chunk-CZOPH7JU.js";
+} from "./chunk-4UZINJ7G.js";
+import "./chunk-KXG4X6YC.js";
+import "./chunk-UNGRO2HT.js";
 import {
   CommonModule,
   DOCUMENT,
@@ -30,14 +35,7 @@ import {
   NgStyle,
   NgTemplateOutlet,
   isPlatformBrowser
-} from "./chunk-XHU5GZOC.js";
-import {
-  FilterService,
-  ObjectUtils,
-  PrimeNGConfig,
-  PrimeTemplate,
-  SharedModule
-} from "./chunk-3L3ZJZFB.js";
+} from "./chunk-YZLHI4I7.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -104,12 +102,12 @@ import {
   ɵɵtemplate,
   ɵɵtemplateRefExtractor,
   ɵɵviewQuery
-} from "./chunk-Z5H46ANP.js";
+} from "./chunk-3BPX7O7P.js";
 import {
   Subject,
   __spreadProps,
   __spreadValues
-} from "./chunk-R7GQRDZ6.js";
+} from "./chunk-RXBPK6MO.js";
 
 // node_modules/primeng/fesm2022/primeng-icons-minus.mjs
 var MinusIcon = class _MinusIcon extends BaseIcon {

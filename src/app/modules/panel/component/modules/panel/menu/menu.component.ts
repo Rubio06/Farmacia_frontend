@@ -18,7 +18,8 @@ export class MenuComponent {
 
     pharmacyData: Pharmacy = {product: '', activePrinciple: '', category: '', laboratory: ''}; // Aquí defines el objeto Pharmacy
 
-    dataSelect: any[] = [];
+    dataSelect: Pharmacy[] = [];
+
 
     constructor(
         private insertServices:InsertService,
@@ -39,6 +40,12 @@ export class MenuComponent {
             console.log("Existe un error", error);
         })
     }
+
+
+
+
+
+
 
     
 

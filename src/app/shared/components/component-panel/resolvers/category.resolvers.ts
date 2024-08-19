@@ -10,4 +10,5 @@ export class SelectCategory implements Resolve<string[]> {
     resolve(): Observable<string[]>{
         return of(category)
     }
+
 }

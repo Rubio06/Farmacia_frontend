@@ -3,7 +3,6 @@ import { Pharmacy } from "../../../models/pharmacy.models";
 
 @Pipe({
     name: 'toUpperCaseandOrder',
-    pure: true
 })
 // PIPES PUROS: se ejecutan cuando la referencia del dato cambia, es decir, cuando se reemplaza la instancia completa de un objeto o array
 // PIES IMPUROS: Sí, eso es correcto. Los pipes impuros en Angular se ejecutan en cada ciclo de detección de cambios, lo que significa 
